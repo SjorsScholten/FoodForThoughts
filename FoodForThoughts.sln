@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFT.AccountService", "FFT.AccountService\FFT.AccountService.csproj", "{E5487DDD-AF16-42B5-8711-D8FFF6717348}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FFT.AccountService", "FFT.AccountService\FFT.AccountService.csproj", "{E5487DDD-AF16-42B5-8711-D8FFF6717348}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFT.PostService", "FFT.PostService\FFT.PostService.csproj", "{60DF5548-C785-47C6-8699-8FB41F6CD02C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FFT.PostService", "FFT.PostService\FFT.PostService.csproj", "{60DF5548-C785-47C6-8699-8FB41F6CD02C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFT.Client", "FFT.Client\FFT.Client.csproj", "{52096982-3320-403A-9C08-74127422F9D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{60DF5548-C785-47C6-8699-8FB41F6CD02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60DF5548-C785-47C6-8699-8FB41F6CD02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60DF5548-C785-47C6-8699-8FB41F6CD02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52096982-3320-403A-9C08-74127422F9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52096982-3320-403A-9C08-74127422F9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52096982-3320-403A-9C08-74127422F9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52096982-3320-403A-9C08-74127422F9D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
