@@ -1,0 +1,31 @@
+name: Build post-service
+
+on:
+  push:
+    branches: [ master ]
+    paths: [FFT.PostService/**]
+  pull_request:
+    branches: [ master ]
+    paths: [FFT.PostService/**]
+    
+env:
+  PROJECT_PATH: 'FFT.AccountService/FFT.AccountService.csproj'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Restore dependencies
+      run: dotnet restore ${{env.PROJECT_PATH}}
+    - name: Build
+      run: dotnet build ${{env.PROJECT_PATH}} --no-restore
+    - name: Test
+      run: dotnet test ${{env.PROJECT_PATH}} --no-build --verbosity normal
