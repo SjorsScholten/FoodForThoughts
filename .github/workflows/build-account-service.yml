@@ -1,4 +1,4 @@
-name: Build the account service
+name: Build account-service
 
 on:
   push:
