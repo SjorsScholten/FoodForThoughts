@@ -2,6 +2,12 @@
 
 [docs](../info_docs.md) \ [services](./info_services.md) \ entry service
 
+#### Table of content
+1. [Actions](#actions)
+2. [Interfaces](#interfaces)
+
+## Responsibility
+
 The entry service is there to link entries to one another. An entry is a certain item that has linkage to other items.
 
 examples of entries are:
@@ -14,15 +20,25 @@ examples of entries are:
 - Create, delete, and update entries
 - Retrieve an entry or a list of entries
 
+## Interfaces
+
+| Name | Method | Endpoint | Task |
+|---|---|---|---|
+| GetEntries | GET | /entries | Returns a list of all entries |
+| GetEntryByID | GET | /\<id\> | Returns an entry of the requested id |
+| CreateEntry | POST | /entries | Creates a new entry with the attached data, and returns the id of the created entry |
+| UpdateEntry | PUT | /entries | Updates the data of an entry |
+| RemoveEntry | DELETE | /entries | Removes an entry |
+
 ## Data Structure
 
 ```json
 {
     "Entry": {
-        "id" : 0,
-        "parent" : 0,
-        "type" : "Account | Post",
-        "status" : "Published | Draft | Suspended"
+        "id" : GUID,
+        "parent" : GUID,
+        "type" : enum {None, Account, Post},
+        "status" : enum {None, Published, Draft, Suspended}
     }
 }
 ```
