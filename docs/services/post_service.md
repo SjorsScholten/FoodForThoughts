@@ -1,10 +1,10 @@
 # Post Service
 
-[docs](../info_docs.md) \ [services](./info_services.md) \ post service
+[docs](../info_docs.md) \ [services](../info_docs.md#services) \ post service
 
 ## Responsibility
 
-
+A post is a content holder for text. examples of usages can be standalone posts, comments on posts, or comments on accounts. 
 
 ## Actions
 
@@ -27,7 +27,20 @@
 {
     "post" : {
         "id" : 0,
-        "content" : ""
+        "account" : 0,
+        "created" : "YYYY-MM-DD::hh::mm::ss",
+        "parent" : {
+            "id" : 0,
+            "type" : "None"
+        },
+        "likes" : [],
+        "data" : ""
     }
 }
 ```
+
+| Name | Type | Usage |
+|---|---|---|
+| id | GUID | used to identify the post when searching |
+| account | GUID | used to identify the account that created the post (directly linked to Account.Id) |
+| content | string | used to hold the information of the post |

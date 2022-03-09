@@ -1,6 +1,6 @@
 # Account Service
 
-[docs](../info_docs.md) \ [services](./info_services.md) \ account service
+[docs](../info_docs.md) \ [services](../info_docs.md#services) \ account service
 
 ## Responsibility
 
@@ -40,6 +40,7 @@ The account service will handle everything involving accounts.
     "account" : {
         "id" : 0,
         "created" : 0000-00-00,
+        "role" : ["Member", "Moderator", "Administrator"],
         "name" : "default name",
         "bio" : "default biography",
     }

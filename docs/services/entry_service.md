@@ -1,6 +1,6 @@
 # Entry Service
 
-[docs](../info_docs.md) \ [services](./info_services.md) \ entry service
+[docs](../info_docs.md) \ [services](../info_docs.md#services) \ entry service
 
 #### Table of content
 1. [Actions](#actions)
@@ -35,10 +35,19 @@ examples of entries are:
 ```json
 {
     "Entry": {
-        "id" : GUID,
-        "parent" : GUID,
-        "type" : enum {None, Account, Post},
-        "status" : enum {None, Published, Draft, Suspended}
+        "id" : 0,
+        "type" : ["None", "Account", "Post"],
+        "parent" : 0,
+        "linkedType" : ["None", "Account", "Post"],
+        "status" : ["None", "Published", "Draft", "Suspended"]
     }
 }
 ```
+
+| Name | Type | Usage |
+|---|---|---|
+| id | GUID | Used to identify the entry, a reference to either Account.Id or Post.Id |
+| type | enum (int) | Used to define the type of entry |
+| parent | GUID | Used to identify the linked entry, a reference to either Account.Id or Post.Id |
+| linkedType | enum (int) | Used to define the type of linked entry |
+| status | enum (int) | *\*optional*, Used to define a state of the entry when handling requests |
