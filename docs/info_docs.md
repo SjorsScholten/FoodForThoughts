@@ -5,7 +5,6 @@
 1. [Introduction](#introduction)
 1. [Services](#services)
 1. [Technology](#technology)
-1. ...
 
 ## Introduction
 
@@ -17,38 +16,63 @@ This project will be realized using a microservice architecture. The front-end w
 
 ![c4-Container-Diagram](./images/FFT_c4Container.jpg)
 
+---
+
 ## Services
 1. [Account service](./services/account_service.md#account-service)
 1. [Post service](./services/post_service.md#post-service)
 
+</br>
+
+---
+
 ## Technology
 
-[
-    TODO: elaborate on,
-    1. Web application (frontend)
-    2. Web services (backend)
-    3. API Gateway (Ocelot)
-    4. Messaging (RabbitMQ) https://www.rabbitmq.com/
-    5. DevOps (GitHub, DockerHub, CI/CD)
-    6. Testing (Selenium)
-]: #
+### Web application
 
-**Back-end Framework** </br>
-The back-end will be realized in C# using ASP.Net Core.
+The frontend web application will be written using React.
 
-**Front-end Framework** </br>
-The front-end will be realized in JavaScript using ReactJS.
+</br>
 
-I have never worked with React before, so this topic will require research:
-How do you set up a project using React?
-How do you use React to create a front-end?
-How can you test a front-end with React?
+### Web services
 
-**Continuous Integration** </br>
-CI pipeline using Github Actions, no hell configuring things like jenkins or teamCity, just configure in the github repository.
+The backend of the system will use a microservice architecture. The services are realized in C# using the ASP.NET Core 3.1 framework.
 
-**Testing** </br>
+</br>
+
+### API Gateway
+
+The architecture of the system will have an API-Gateway to connect the frontend to the backend. The gateway will be realized in C# using ASP.NET Core 3.1 and the Ocelot framework.
+
+</br>
+
+### Messaging
+
+The service will communicate with each other using a message bus. The bus will be realized using RabbitMQ.
+
+</br>
+
+### Data storage
+
+Data will be stored using MongoDB. MongoDB is a cloud provider where you can host scalable databases.
+
+### DevOps
+
+The documentation will be written in Markdown. This allows us to easily divide our texts into different sections and link them. It creates a minimal tool set for styling, so there is less time spend in there. Markdown view is supported in GitHub and VS Code for easy editing and viewing.
+
+GitHub will be used as DevOps environment. GitHub Actions allows us to create a CI/CD pipeline, so we can build/test/publish our application.
+
+Our CD pipeline will publish a docker image to DockerHub.
+
+We will use SonarCloud for static code coverage.
+
+</br>
+
+### Testing
+
 The back-end will be tested using unit tests.
 The front-end can also be tested, React has its own testing library.
 Acceptance testing using selenium.
 The overall project will go through static code coverage of SonarCloud.
+
+</br>

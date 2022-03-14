@@ -4,7 +4,11 @@
 
 ## Responsibility
 
-The account service will handle everything involving accounts.
+The account service will handle everything involving accounts (account creation, management, and following).
+
+An account allows a user to create their own posts and follow accounts.
+
+When an account follows an another account, this account will recieve updates from the followed account.
 
 ## Actions
 
@@ -38,8 +42,8 @@ The account service will handle everything involving accounts.
 ```json
 {
     "account" : {
-        "id" : 0,
-        "created" : 0000-00-00,
+        "id" : "0000000-0000-0000-0000-000000000000",
+        "created" : "YYYY-MM-DD::hh::mm::ss",
         "role" : ["Member", "Moderator", "Administrator"],
         "name" : "default name",
         "bio" : "default biography",
@@ -50,9 +54,9 @@ The account service will handle everything involving accounts.
 ```json
 {
     "follow" : {
-        "user" : 0,
-        "follower" : 0,
-        "initiated" : 0000-00-00
+        "user" : "0000000-0000-0000-0000-000000000000",
+        "follower" : "0000000-0000-0000-0000-000000000000",
+        "initiated" : "YYYY-MM-DD::hh::mm::ss"
     }
 }
 ```

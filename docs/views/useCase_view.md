@@ -26,8 +26,6 @@
 
 ---
 
-#### UC01_CreateAccount
-
 **Name:** UC01_CreateAccount <br/>
 **Description:** As a user i want to create an account <br/>
 **Actors:** User
@@ -37,13 +35,13 @@ None
 
 **Steps:**
 1. The User navigates to the account creation page
-2. The User fills in the form with login credentials
-3. The System will precheck the input fields for faults
-4. The User submits the form
-5. The System will send a REST call with the data to the account service
-6. The System will create an entry for the account
-7. The System will return the id of the created account
-8. The System will show the user the account page
+1. The User fills in the form with account info and login credentials
+1. The System will precheck the input fields for faults
+1. The User submits the form
+1. The System will send a REST call with the data to the account service
+1. The System will create a new account with the data
+1. The System will return the ID of the created account
+1. The System will show the user the account page
 
 ---
 
@@ -63,5 +61,118 @@ None
 [^UC02_1]: If the value is null, return all entries
 
 [^UC02_2]: If the entry does not exist, return nothing
+
+---
+
+**Name:** UC03_UpdateAccount <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** Member
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account modification page
+1. The User edits the form
+1. The System checks the form for faults
+1. The User submits the form
+1. The System sends a REST call to the account service
+1. The System updates the account data.
+1. The System returns the result of the action
+1. The System will show the account info page with the new data.
+
+---
+
+**Name:** UC04_FollowAccount <br/>
+**Description:** As a user i want to follow an account<br/>
+**Actors:** Member
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User presses a follow button on an account.
+1. The System will send a REST call to the account service.
+1. The System will create a new follow with the user account and the follow account.
+1. The system will return the result of the action.
+1. The System will show the followers' page of the user.
+
+---
+
+**Name:** UC05_SuspendAccount <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** Moderator
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account creation page
+
+---
+
+**Name:** UC06_UpdateRole <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** Member
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account creation page
+
+---
+
+</br>
+
+### Post Service
+
+---
+
+**Name:** UC07_SearchPost <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** User
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account creation page
+
+---
+
+**Name:** UC08_CreatePost <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** Member
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account creation page
+
+---
+
+**Name:** UC09_LikePost <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** Member
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account creation page
+
+---
+
+**Name:** UC10_SilencePost <br/>
+**Description:** As a user i want to update my account information<br/>
+**Actors:** Member
+
+**Pre-condition:**
+none
+
+**Steps:**
+1. The User navigates to the account creation page
 
 ---

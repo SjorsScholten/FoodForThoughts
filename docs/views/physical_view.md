@@ -6,5 +6,5 @@
 
 ## Deployment diagram
 
-![FFT deployment diagram](../images/FFT_DeploymentDiagram.jpg)
+![FFT deployment diagram](../images/FFT_c4Deployment.jpg)
 
