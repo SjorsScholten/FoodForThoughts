@@ -2,14 +2,13 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 5002
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["FFT.PostService/FFT.PostService.csproj", "FFT.PostService/"]
+COPY ["./FFT.PostService.csproj", "FFT.PostService/"]
 RUN dotnet restore "FFT.PostService/FFT.PostService.csproj"
-COPY . .
+COPY [".", "./FFT.PostService"]
 WORKDIR "/src/FFT.PostService"
 RUN dotnet build "FFT.PostService.csproj" -c Release -o /app/build
 

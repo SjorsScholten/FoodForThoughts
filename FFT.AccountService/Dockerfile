@@ -2,14 +2,13 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 5001
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["FFT.AccountService/FFT.AccountService.csproj", "FFT.AccountService/"]
+COPY ["./FFT.AccountService.csproj", "FFT.AccountService/"]
 RUN dotnet restore "FFT.AccountService/FFT.AccountService.csproj"
-COPY . .
+COPY [".", "./FFT.AccountService"]
 WORKDIR "/src/FFT.AccountService"
 RUN dotnet build "FFT.AccountService.csproj" -c Release -o /app/build
 

@@ -1,0 +1,14 @@
+services:
+  web-api:
+    build: .
+    container_name: fft-gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - 5000:5000
+
+networks:
+  default:
+    external:
+      name: fft-network
