@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace FFT.PostService
 {
-    public class PostController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PostController : ControllerBase
     {
+        [HttpGet]
+        public async Task<IActionResult> GetPosts()
+        {
+            return Ok("Get posts from service");
+        }
     }
 }

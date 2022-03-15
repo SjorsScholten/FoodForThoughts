@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace FFT.AccountService.Controllers
 {
@@ -8,9 +9,9 @@ namespace FFT.AccountService.Controllers
     {
 
         [HttpGet]
-        public string GetAccounts()
+        public async Task<IActionResult> GetAccounts()
         {
-            return "a list of accounts";
+            return Ok("get accounts from service");
         }
     }
 }
