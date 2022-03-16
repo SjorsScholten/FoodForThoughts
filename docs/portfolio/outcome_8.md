@@ -1,6 +1,6 @@
 # Distributed Data
 
-[Portfolio](./info_portfolio.md) | Distributed Datat
+[Portfolio](./info_portfolio.md) | Distributed Data
 
 [Uitleg leeruitkomst]: #
 
@@ -8,7 +8,7 @@
 
 | ID | Description | Type | Level |
 |---|---|---|---|
-| 1.1 | sprint | GP | orienting |
+| 1.1 |  | IP | orienting |
 
 ## Argumentation
 

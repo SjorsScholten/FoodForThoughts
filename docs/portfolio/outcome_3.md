@@ -8,8 +8,8 @@
 
 | ID | Description | Type | Level |
 |---|---|---|---|
-| 1.1 | sprint | GP | orienting |
+| 1.1 |  |  |  |
 
 ## Argumentation
 
-### 1.1: sprint 0
+### 1.1: 

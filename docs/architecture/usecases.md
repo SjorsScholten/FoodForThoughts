@@ -9,7 +9,7 @@
 
 ## Use Case Diagram
 
-![UseCase Diagram](../images/FFT_UseCaseDiagram.jpg)
+![UseCase Diagram](./images/FFT_UseCaseDiagram.jpg)
 
 ## Actors
 
