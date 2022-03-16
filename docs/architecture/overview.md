@@ -56,6 +56,8 @@ The service will communicate with each other using a message bus. The bus will b
 
 Data will be stored using MongoDB. MongoDB is a cloud provider where you can host scalable databases.
 
+</br>
+
 ### DevOps
 
 The documentation will be written in Markdown. This allows us to easily divide our texts into different sections and link them. It creates a minimal tool set for styling, so there is less time spend in there. Markdown view is supported in GitHub and VS Code for easy editing and viewing.
@@ -72,7 +74,9 @@ We will use SonarCloud for static code coverage.
 
 The back-end will be tested using unit tests.
 The front-end can also be tested, React has its own testing library.
+
 Acceptance testing using selenium.
+
 The overall project will go through static code coverage of SonarCloud.
 
 </br>
