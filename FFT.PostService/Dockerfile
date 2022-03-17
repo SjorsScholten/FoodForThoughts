@@ -6,10 +6,10 @@ EXPOSE 5002
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["./FFT.PostService.csproj", "FFT.PostService/"]
+COPY ["./FFT.PostService/FFT.PostService.csproj", "FFT.PostService/"]
 RUN dotnet restore "FFT.PostService/FFT.PostService.csproj"
-COPY [".", "./FFT.PostService"]
 WORKDIR "/src/FFT.PostService"
+COPY ["./FFT.PostService", "."]
 RUN dotnet build "FFT.PostService.csproj" -c Release -o /app/build
 
 FROM build AS publish

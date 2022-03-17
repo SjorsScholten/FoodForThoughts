@@ -1,0 +1,57 @@
+services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: FFT.Gateway/Dockerfile
+    container_name: fft-gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - 5000:5000
+    networks:
+      - fft-network
+
+  account-service:
+    build:
+      context: .
+      dockerfile: FFT.AccountService/Dockerfile
+    container_name: fft-account-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5001
+    ports:
+      - 5001:5001
+    networks:
+      - fft-network
+
+  post-service:
+    build:
+      context: .
+      dockerfile: FFT.PostService/Dockerfile
+    container_name: fft-post-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5002
+    ports:
+      - 5002:5002
+    networks:
+      - fft-network
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: FFT.Frontend/Dockerfile
+    container_name: fft-frontend
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - 3000:3000
+    networks:
+      - fft-network
+    
+
+networks:
+  fft-network:
+    external: true

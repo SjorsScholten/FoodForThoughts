@@ -6,10 +6,10 @@ EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["./FFT.Gateway.csproj", "FFT.Gateway/"]
+COPY ["./FFT.Gateway/FFT.Gateway.csproj", "FFT.Gateway/"]
 RUN dotnet restore "FFT.Gateway/FFT.Gateway.csproj"
-COPY [".", "./FFT.Gateway"]
 WORKDIR "/src/FFT.Gateway"
+COPY ["./FFT.Gateway", "."]
 RUN dotnet build "FFT.Gateway.csproj" -c Release -o /app/build
 
 FROM build AS publish

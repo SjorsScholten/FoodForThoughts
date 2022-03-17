@@ -1,20 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>FFT.Client</Name>
-    <RootNamespace>FFT.Client</RootNamespace>
-    <EnableTypeScript>true</EnableTypeScript>
-    <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <Name>FFT.Frontend</Name>
+    <RootNamespace>FFT.Frontend</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>f32a5e56-57d7-42da-83d1-96ae7c6652ea</ProjectGuid>
+    <ProjectGuid>1f5b4950-052c-466a-9fc5-1a9e07aeb599</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>server.ts</StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +21,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
     <StartWebBrowser>true</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -31,28 +31,30 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="dist\app-bundle.js" />
-    <Content Include="dist\app-bundle.js.map" />
-    <Content Include="index.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="tsconfig.json">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="webpack-config.js">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="server.js" />
+    <None Include="server.ts" />
+    <Content Include="Dockerfile" />
+    <Content Include="Dockerfile.Prod" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\index.html" />
+    <Content Include="public\logo192.png" />
+    <Content Include="public\logo512.png" />
+    <Content Include="public\manifest.json" />
+    <Content Include="public\robots.txt" />
+    <Content Include="src\App.css" />
+    <Content Include="src\App.js" />
+    <Content Include="src\App.test.js" />
+    <Content Include="src\index.css" />
+    <Content Include="src\index.js" />
+    <Content Include="src\logo.svg" />
+    <Content Include="src\reportWebVitals.js" />
+    <Content Include="src\setupTests.js" />
+    <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.tsx">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dist\" />
+    <Folder Include="public\" />
+    <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
