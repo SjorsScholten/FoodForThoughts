@@ -46,6 +46,12 @@
     <Content Include="src\index.css" />
     <Content Include="src\index.js" />
     <Content Include="src\logo.svg" />
+    <Content Include="src\pages\Home.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\pages\Layout.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\reportWebVitals.js" />
     <Content Include="src\setupTests.js" />
     <Content Include="tsconfig.json" />
@@ -55,6 +61,7 @@
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="src\" />
+    <Folder Include="src\pages\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

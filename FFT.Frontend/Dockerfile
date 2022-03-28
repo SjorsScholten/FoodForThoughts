@@ -9,4 +9,6 @@ RUN npm install
 
 COPY ["./FFT.Frontend", "."]
 
+WORKDIR /app/FFT.Frontend
+
 CMD ["npm", "start"]
