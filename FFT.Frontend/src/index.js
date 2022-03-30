@@ -1,11 +1,16 @@
 import React from 'react';
 import * as ReactDomClient from 'react-dom/client';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Layout from "./pages/Layout";
 import NoPage from "./pages/NoPage";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import Search from "./pages/Search"
+
 import reportWebVitals from './reportWebVitals';
 
 export default function App() {
@@ -14,7 +19,8 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="/Profile" element={<Profile />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/search" element={<Search />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>

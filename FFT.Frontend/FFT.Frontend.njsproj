@@ -58,6 +58,9 @@
     <Content Include="src\pages\NoPage.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\pages\Search.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\reportWebVitals.js" />
     <Content Include="src\setupTests.js" />
   </ItemGroup>

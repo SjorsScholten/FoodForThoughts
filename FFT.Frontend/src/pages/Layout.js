@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
 const Layout = () => {
@@ -9,7 +9,8 @@ const Layout = () => {
                     <Navbar.Brand href="/">Food-For-Thoughts</Navbar.Brand>
                     <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/Profile">Profile</Nav.Link>
+                        <Nav.Link href="/profile">Profile</Nav.Link>
+                        <Nav.Link href="/search">Search</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
