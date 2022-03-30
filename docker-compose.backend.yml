@@ -1,0 +1,63 @@
+services:
+  database:
+    image: mongo:latest
+    container_name: mongo_db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - fft-network
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: FFT.Gateway/Dockerfile
+    container_name: fft-gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - 5000:5000
+    networks:
+      - fft-network
+
+  account-service:
+    build:
+      context: .
+      dockerfile: FFT.AccountService/Dockerfile
+    container_name: fft-account-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5001
+      - MONGODB_CONNSTRING=mongo_db://admin:secret@mongo_db
+    ports:
+      - 5001:5001
+    depends_on:
+      - database
+    networks:
+      - fft-network
+
+  post-service:
+    build:
+      context: .
+      dockerfile: FFT.PostService/Dockerfile
+    container_name: fft-post-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5002
+      - MONGODB_CONNSTRING=mongo_db://admin:secret@mongo_db
+    ports:
+      - 5002:5002
+    depends_on:
+      - database
+    networks:
+      - fft-network
+
+volumes:
+  mongo_data:
+
+networks:
+  fft-network:
+    external: true

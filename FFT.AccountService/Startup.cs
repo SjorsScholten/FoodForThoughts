@@ -22,6 +22,17 @@ namespace FFT.AccountService
             services.AddControllers();
             services.Configure<AccountStoreDatabaseSettings>(Configuration.GetSection("AccountStoreDatabase"));
             services.AddSingleton<Services.AccountService>();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("*")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,9 +44,8 @@ namespace FFT.AccountService
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

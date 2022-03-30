@@ -10,7 +10,43 @@
         }
       ],
       "UpstreamPathTemplate": "/api/account",
-      "UpstreamHttpMethod":  []
+      "UpstreamHttpMethod": ["Get", "Post"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/{accountId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "fft-account-service",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/account/{accountId}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/post",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "fft-post-service",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/post",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/post{postId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "fft-post-service",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/post/{postId}",
+      "UpstreamHttpMethod": ["Get", "Put", "Delete"]
     }
   ],
   "GlobalConfiguration": {
