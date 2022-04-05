@@ -1,11 +1,12 @@
+import { Container } from "react-bootstrap";
 import Comments from "../components/Comments";
 
-const Home = () => {
+function Home(){
     return (
-        <div>
+        <Container>
             <h1>Home</h1>
             <Comments />
-        </div>
+        </Container>
     );
 };
 
