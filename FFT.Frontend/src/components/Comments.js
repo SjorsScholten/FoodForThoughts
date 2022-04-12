@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Comment from './Comment';
 
 function Comments(props) {
+    /*
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
@@ -21,7 +22,6 @@ function Comments(props) {
             )
     }, [])
 
-    /*
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -43,7 +43,7 @@ function Comments(props) {
     return (
         <Container>
             {comments.map(item => (
-                <Comment />
+                <Comment item={item}/>
             ))}
         </Container>
     );

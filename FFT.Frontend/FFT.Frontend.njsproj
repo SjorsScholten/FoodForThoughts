@@ -44,6 +44,9 @@
     <Content Include="src\components\Comments.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\components\SearchBar.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\index.js" />
     <Content Include="src\pages\Home.js">
       <SubType>Code</SubType>

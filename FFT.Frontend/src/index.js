@@ -5,15 +5,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { useEffect } from "react";
+import { run as runHolder } from 'holderjs';
+
 import Layout from "./pages/Layout";
 import NoPage from "./pages/NoPage";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Search from "./pages/Search"
+import Search from "./pages/Search";
+import WebGL from "./pages/WebGL";
 
 import reportWebVitals from './reportWebVitals';
 
 export default function App() {
+    useEffect(() => {
+        runHolder('placeholder-img');
+    });
+
     return (
         <BrowserRouter>
             <Routes>
@@ -21,6 +29,7 @@ export default function App() {
                     <Route index element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/search" element={<Search />} />
+                    <Route path="/WebGL" element={<WebGL />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>
