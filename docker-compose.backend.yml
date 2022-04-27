@@ -60,4 +60,4 @@ volumes:
 
 networks:
   fft-network:
-    external: true
+    driver: bridge

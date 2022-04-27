@@ -1,7 +1,11 @@
+import { Container } from "react-bootstrap";
 
 function Profile() {
     return (
-        <h1>Profile</h1>
+        <Container>
+            <h1>Profile</h1>
+
+        </Container>
     );
 }
 

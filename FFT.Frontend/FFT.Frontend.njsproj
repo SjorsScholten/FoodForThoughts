@@ -37,15 +37,17 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\App.css" />
-    <Content Include="src\App.js" />
     <Content Include="src\App.test.js" />
+    <Content Include="src\components\Comment.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\components\Comments.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\index.css" />
+    <Content Include="src\components\SearchBar.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\index.js" />
-    <Content Include="src\logo.svg" />
     <Content Include="src\pages\Home.js">
       <SubType>Code</SubType>
     </Content>

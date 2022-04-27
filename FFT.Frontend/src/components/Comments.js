@@ -1,6 +1,9 @@
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react";
+import { Container } from 'react-bootstrap';
+import Comment from './Comment';
 
 function Comments(props) {
+    /*
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
@@ -12,11 +15,11 @@ function Comments(props) {
                 setIsLoaded(true);
                 setItems(result);
             },
-            (error) => {
-                setIsLoaded(true);
-                setError(error);
-            }
-        )
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
+            )
     }, [])
 
     if (error) {
@@ -34,6 +37,16 @@ function Comments(props) {
             </ul>
         );
     }
+    */
+    const comments = ["1", "2", "3"];
+
+    return (
+        <Container>
+            {comments.map(item => (
+                <Comment item={item}/>
+            ))}
+        </Container>
+    );
 }
 
 export default Comments;
