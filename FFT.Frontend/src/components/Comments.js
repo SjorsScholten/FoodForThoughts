@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import Comment from './Comment';
 
 function Comments(props) {
-    /*
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
@@ -37,7 +36,7 @@ function Comments(props) {
             </ul>
         );
     }
-    */
+    /*
     const comments = ["1", "2", "3"];
 
     return (
@@ -47,6 +46,7 @@ function Comments(props) {
             ))}
         </Container>
     );
+    */
 }
 
 export default Comments;
