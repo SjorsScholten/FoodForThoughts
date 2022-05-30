@@ -10,11 +10,11 @@ namespace FFT.AccountService.Models
         public string? Id { get; set; }
 
         [BsonElement("Name")]
-        public string AccountName { get; set; }
+        public string? AccountName { get; set; }
 
-        public string Created { get; set; }
+        public string? Created { get; set; }
 
-        public string Role { get; set; }
+        public string? Role { get; set; }
 
     }
 }
