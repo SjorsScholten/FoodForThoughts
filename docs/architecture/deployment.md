@@ -23,3 +23,6 @@ For our data solution we will use MongoDB. MongoDB is both scalable vertically (
 MongoDB allows for scaling using replication and partitioning. With replication, there are copies made to distribute the load. With partitioning, data is spread over multiple nodes in a cluster.
 
 MongoDB can be used through the MongoDB cloud service where they have a free sandbox tier. It can also run as a container in docker. The benefit of using MongoDB as a cloud service, is that it comes with monitoring tooling. 
+
+## Data Properties
+

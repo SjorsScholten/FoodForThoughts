@@ -16,6 +16,20 @@ spec:
     spec:
       containers:
       - name: account
-        image: FFT.Account:latest
+        image: 361438/fft.account:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5001
+          name: http-account
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: account-service
+spec:
+  selector:
+    app: account
+  ports:
+  - protocol: TCP
+    port: 5001
+    targetPort: http-account

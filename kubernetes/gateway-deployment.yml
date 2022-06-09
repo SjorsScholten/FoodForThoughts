@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: FFT.Gateway:latest
+        image: 361438/fft.gateway:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
+          name: http-gateway
 
 ---
 apiVersion: v1
@@ -30,5 +31,5 @@ spec:
     app: gateway
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 5123 
+    port: 5000
+    targetPort: http-gateway
