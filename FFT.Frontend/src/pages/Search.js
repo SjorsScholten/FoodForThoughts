@@ -30,7 +30,7 @@ function Search() {
             <Stack gap={3}>
                 <SearchBar />
                 <SearchFilters />
-                {items.map((item) => <Comment item={item} />)}
+                {items.map((item) => <Comment key={item.id} item={item} />)}
             </Stack>
         </Container>
     );

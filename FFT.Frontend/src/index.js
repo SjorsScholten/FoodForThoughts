@@ -30,10 +30,10 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/search" element={<Search />} />
-                    <Route path="/WebGL" element={<WebGL />} />
+                    <Route path="login" element={<Login setToken={setToken}/>} />
+                    <Route path="profile/:profileId" element={<Profile />} />
+                    <Route path="search" element={<Search />} />
+                    <Route path="WebGL" element={<WebGL />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>

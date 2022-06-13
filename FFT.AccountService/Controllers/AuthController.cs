@@ -23,11 +23,11 @@ namespace FFT.AccountService.Controllers
             var user = await m_AccountService.GetByEmailAsync(account.Email);
             
             if(user == null) {
-                return BadRequest();
+                return BadRequest("username not found");
             }
 
             if(!m_AuthService.VerifyPassword(account.Password, user.Password)){
-                return BadRequest();
+                return BadRequest("password not found");
             }
 
             return m_AuthService.GetAuthData(user.Id);

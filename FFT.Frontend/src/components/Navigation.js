@@ -1,5 +1,5 @@
 import { Container, Navbar, NavDropdown, Image, Stack } from "react-bootstrap";
-import SearchBar from "../components/SearchBar";
+import SearchBar from '../components/SearchBar';
 
 export default function NavigationPreloadManager(props) {
 

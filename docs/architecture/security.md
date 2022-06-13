@@ -1,27 +1,25 @@
 # Security View
 
-## Design
+## Risk analysis
 
-### Risk Analysis
+- create a risk assesment
+- create a risk management plan
+- implement the risk management plan
+- monitor the risks
+
+## OWASP
 
 
-
-### OWASP
-
-
-
-### Authentication
+## Authentication
 
 Authentication is the process of verifying who a user is.
 
-### Authorization
+## Authorization
 
 Authorizations is the process of verifying what a user has access to. In the design phase we determine what is accessible to what group, which is often done through roles. Not everyone should have access to all the data or processes.
 
-## Development
+## Code Analysis
 
-- Using the latest libraries to avoid security vulnerabilities
-- Using HTTPS and SSL certificates
 - Using SonarCloud for code analysis (CI/CD)
 
 ## Deployment
