@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as ReactDomClient from 'react-dom/client';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,10 +14,13 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import WebGL from "./pages/WebGL";
+import Login from './pages/Login';
 
 import reportWebVitals from './reportWebVitals';
 
 export default function App() {
+    const [token, setToken] = useState(true);
+
     useEffect(() => {
         runHolder('placeholder-img');
     });
@@ -27,6 +30,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
+                    <Route path="/login" element={<Login />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/WebGL" element={<WebGL />} />

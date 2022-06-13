@@ -30,7 +30,7 @@ function Comments(props) {
             <ul>
                 {items.map(item => (
                     <li key={item.id}>
-                        {item.id}
+                        {JSON.stringify(item)}
                     </li>
                 ))}
             </ul>

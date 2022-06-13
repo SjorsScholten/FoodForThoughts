@@ -5,12 +5,14 @@ namespace FFT.AccountService.Models
 {
     public class Account
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
         [BsonElement("Name")]
         public string? AccountName { get; set; }
+
+        public string? Email { get; set; }
+
+        public string? Password { get; set; }
 
         public string? Created { get; set; }
 

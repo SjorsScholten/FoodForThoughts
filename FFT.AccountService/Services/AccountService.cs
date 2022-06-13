@@ -23,6 +23,12 @@ namespace FFT.AccountService.Services
         public async Task<Account?> GetAsync(string id) =>
             await m_AccountsCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
+        public async Task<Account?> GetByEmailAsync(string email) =>
+            await m_AccountsCollection.Find(x => x.Email == email).FirstOrDefaultAsync();
+
+        public async Task<Account?> GetByNameAsync(string name) =>
+            await m_AccountsCollection.Find(x => x.AccountName == name).FirstOrDefaultAsync();
+
         public async Task CreateAsync(Account newAccount) =>
             await m_AccountsCollection.InsertOneAsync(newAccount);
 
@@ -31,5 +37,15 @@ namespace FFT.AccountService.Services
 
         public async Task RemoveAsync(string id) =>
             await m_AccountsCollection.DeleteOneAsync(x => x.Id == id);
+
+        public async Task<bool> IsEmailUnique(string email){
+            var user = await GetByEmailAsync(email);
+            return user == null;
+        }
+
+        public async Task<bool> IsNameUnique(string name){
+            var user = await GetByNameAsync(name);
+            return user == null;
+        }
     }
 }
