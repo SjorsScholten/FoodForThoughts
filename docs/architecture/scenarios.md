@@ -31,9 +31,11 @@ How do you work towards a secure system in all phases of the SDLC?
 ## Design
 - The designer wants a user to require authorization before creating posts or updating his account. So, not just anyone can create posts or update the account of any user.
 - The designer wants to avoid common security exploits
+- Perform a risk assessment and create a risk management plan
 
 ## Development
-- ...
+- A developer wants to implement the risk management plan to avoid known risks.
+- A developer wants static code analysis, preferably in the CI, so he can detect bugs and risks early in development.
 
 ## Testing
 - The tester wants to know whether a certain function or component can be exploited.
