@@ -5,3 +5,7 @@ Food for thoughts is build using a React front-end and a ASP.NET Core back-end. 
 
 ASP.NET Core 3.1
 React
+
+database:
+- u: FFTAdmin
+- p: jcnIazaMP9DoRauv

@@ -2,13 +2,10 @@
 
 ## Risk analysis
 
-- create a risk assesment
+- create a risk assessment
 - create a risk management plan
 - implement the risk management plan
 - monitor the risks
-
-## OWASP
-
 
 ## Authentication
 

@@ -2,12 +2,11 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
 
-function Layout() {
-    const [token, setToken] = useState();
+function Layout(props) {
 
     return (
         <>
-            <Navigation token={token}/>
+            <Navigation token={props.token}/>
             <br />
             <Outlet />
             <br />

@@ -1,7 +1,7 @@
 import { Container, Navbar, NavDropdown, Image, Stack } from "react-bootstrap";
 import SearchBar from '../components/SearchBar';
 
-export default function NavigationPreloadManager(props) {
+export default function Navigation(props) {
 
     if(props.token){
         return (

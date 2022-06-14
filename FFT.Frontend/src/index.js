@@ -19,7 +19,7 @@ import Login from './pages/Login';
 import reportWebVitals from './reportWebVitals';
 
 export default function App() {
-    const [token, setToken] = useState(true);
+    const [token, setToken] = useState();
 
     useEffect(() => {
         runHolder('placeholder-img');
@@ -28,7 +28,7 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
+                <Route path="/" element={<Layout token={token}/>}>
                     <Route index element={<Home />} />
                     <Route path="login" element={<Login setToken={setToken}/>} />
                     <Route path="profile/:profileId" element={<Profile />} />
