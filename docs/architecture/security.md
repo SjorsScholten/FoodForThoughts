@@ -30,3 +30,9 @@ Authorizations is the process of verifying what a user has access to. In the des
 
 - Logging
 - Health check
+
+## Data
+
+Personal data should comply with GDPR. This will mostly apply to account details such as date of birth and contact information. As a developer you should know who stores your data and if they are compliant with GDPR. Most big companies like google and microsoft are compliant to these regulations.
+
+For our application we want to host it on azure. Our database is hosted on MongoDB cloud, which uses azure servers to host your database. You as the developer can choose where the server is located.

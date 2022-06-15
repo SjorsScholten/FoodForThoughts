@@ -24,5 +24,9 @@ MongoDB allows for scaling using replication and partitioning. With replication,
 
 MongoDB can be used through the MongoDB cloud service where they have a free sandbox tier. It can also run as a container in docker. The benefit of using MongoDB as a cloud service, is that it comes with monitoring tooling. 
 
-## Data Properties
+## Monitoring
 
+For monitoring our application we have several options. 
+
+- When hosting in the cloud on azure we get different dashboards to monitor our applications performance and availability. 
+- MongoDB also has a dashboard to monitor the activity of your database.
